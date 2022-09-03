@@ -1,0 +1,88 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.box:hover .tools {
+  display: flex;
+  background-color: rgba(124, 124, 124, 0.538);
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+.tools {
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.box:hover .tools button {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.tools button {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.modal-enter .modalContent {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.modal-enter-active .modalContent {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+
+.modal-exit .modalContent {
+  opacity: 1;
+}
+
+.modal-exit-active .modalContent {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.3s;
+}
+
+input[name="category"]:checked + label {
+  background: #94a3b8;
+  color: white;
+}
+
+input[name="rate"]:checked + label {
+  background: #94a3b8;
+  color: white;
+}
+
+input[name="tags"]:checked + label {
+  background: #94a3b8;
+  color: white;
+}
+
+input[name="year"]:checked + label {
+  background: #94a3b8;
+  color: white;
+}
+.product:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: box-shadow 500ms;
+}
+.product {
+  transition: box-shadow 500ms;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    background-image: url(public/assets/banner1.png);
+  }
+}
+
+.banner{
+  height: 500px;
+}
+
+
