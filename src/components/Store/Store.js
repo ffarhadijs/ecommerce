@@ -81,6 +81,7 @@ const Store = () => {
                       onChange={changeHandler}
                       checked={filter.category === item.value}
                       className="hidden"
+                      data-testid="category"
                     />
                     <label
                       htmlFor={item.name}
@@ -105,6 +106,7 @@ const Store = () => {
                     step={50}
                     min={0}
                     max={1000}
+                    data-testid="priceSlider"
                   />
                 </Box>
               </div>{" "}
@@ -140,6 +142,7 @@ const Store = () => {
                       onChange={changeHandler}
                       checked={filter.rate === item.number}
                       className="hidden"
+                      data-testid="rate"
                     />
                     <label
                       htmlFor={item.string}
@@ -184,8 +187,10 @@ const Store = () => {
             </div>
             <div className="flex flex-row justify-between items-center w-24">
               <button
+                name="list"
                 className="text-xl font-semibold text-slate-800 border border-slate-900 p-2"
                 onClick={listShow}
+                data-testid="listBox"
               >
                 <FaList />
               </button>
@@ -207,9 +212,10 @@ const Store = () => {
             {products.map((item) => (
               <div
                 className={`${
-                  list ? "h-52 lg:h-72 flex-row" : "h-[400px] flex-col"
+                  list ? "h-52 lg:h-72 flex-row list" : "h-[400px] flex-col grid"
                 } flex product bg-gray-100 border `}
                 key={item.id}
+                data-testid="productDiv"
               >
                 <div
                   className={`${
